@@ -3,11 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdajani <hdajani@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 15:37:26 by hdajani           #+#    #+#             */
-/*   Updated: 2022/08/16 15:39:16 by hdajani          ###   ########.fr       */
+/*   Updated: 2022/08/17 01:32:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//https://www.factmonster.com/math-science/mathematics/prime-numbers-facts-examples-table-of-all-up-to-1000
+int ft_is_prime(int nb);
+
+int ft_is_prime(int nb)
+{
+    int i;
+    
+    i = 2;
+    if (nb == 2 || nb == 3 || nb == 5 || nb == 7)
+        return (1);
+    if (nb < 2)
+        return (0);
+    while (i * i <= nb)
+    {
+        if (nb % i == 0) return (0);
+        i ++;
+    }
+    return (1);
+
+}

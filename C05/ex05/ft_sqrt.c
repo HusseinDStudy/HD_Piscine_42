@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdajani <hdajani@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 15:26:08 by hdajani           #+#    #+#             */
-/*   Updated: 2022/08/16 15:36:54 by hdajani          ###   ########.fr       */
+/*   Updated: 2022/08/17 00:50:08 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,15 @@ int ft_sqrt(int nb);
 
 int ft_sqrt(int nb)
 {
-	unsigned long long int a=2147483647*2147483647;
-	while(i)
+	int	i;
+
+	i = 0;
+	if (nb < 0) return (0);
+	
+	while (i * i < nb && i < 46340)
+	{
+		i++;
+	}
+	if (i * i == nb) return (i);
+	else return (0);
 }
-//https://www.cuemath.com/algebra/squares-and-square-roots/
-Écrire une fonction qui renvoie la racine carrée entière d’un nombre si elle existe,
-0 si la racine carrée n’est pas entière.
-• Elle devra être prototypée de la façon suivante :

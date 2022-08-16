@@ -82,3 +82,7 @@ int main(void)
  }
 }
 
+//si racine n'est pas primaire rien ne serair
+//https://en.wikipedia.org/wiki/Primality_test#C,_C++,_C#_&_D
+//https://www.factmonster.com/math-science/mathematics/prime-numbers-facts-examples-table-of-all-up-to-1000
+
