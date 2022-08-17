@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hdajani <hdajani@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 18:24:18 by hdajani           #+#    #+#             */
-/*   Updated: 2022/08/15 21:40:28 by marvin           ###   ########.fr       */
+/*   Updated: 2022/08/17 12:40:46 by hdajani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,16 @@ int	ft_strlen(char *str)
 	return (counter);
 }
 
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	counter;
+
+	counter = 0;
+	while (s2[counter] != '\0' && s1[counter] && s1[counter] == s2[counter])
+		counter++;
+	return (s1[counter] - s2[counter]);
+}
+
 char	*ft_strstr(char *str, char *to_find)
 {
 	int	counter_str;
@@ -31,7 +41,7 @@ char	*ft_strstr(char *str, char *to_find)
 
 	counter_str = 0;
 	counter_to_find = 0;
-	if (*to_find == 0 || *to_find == *str)
+	if (ft_strlen(to_find) == 0 || !ft_strcmp(str, to_find))
 		return (str);
 	while (str[counter_str])
 	{
