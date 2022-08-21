@@ -6,27 +6,33 @@
 /*   By: hdajani <hdajani@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 12:30:20 by hdajani           #+#    #+#             */
-/*   Updated: 2022/08/16 12:31:31 by hdajani          ###   ########.fr       */
+/*   Updated: 2022/08/18 12:52:04 by hdajani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-
-
-int main(int argv, char **args)
+void	ft_putstr(char *str)
 {
-	int i;
+	int	i;
 
-	i = argv-1;
-	if(argv>=1)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		while(args[i]!=0)
-		{
-			ft_putstr(args[i]);
-			write(1, '\n', 1);
-			i--;
-		}
-		write(1, '\n', 1);
+		write(1, &str[i], 1);
+		i++;
+	}
+}
+
+int	main(int argv, char **args)
+{
+	int	i;
+
+	i = argv - 1;
+	while (i != 0)
+	{
+		ft_putstr(args[i]);
+		write(1, "\n", 1);
+		i--;
 	}
 }
