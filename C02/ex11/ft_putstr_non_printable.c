@@ -6,7 +6,7 @@
 /*   By: hdajani <hdajani@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 08:45:17 by hdajani           #+#    #+#             */
-/*   Updated: 2022/08/13 16:30:15 by hdajani          ###   ########.fr       */
+/*   Updated: 2022/08/23 16:23:06 by hdajani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_putstr_non_printable(char *str);
 
-int	ft_str_is_printable(char str)
+int	ft_str_is_printable(unsigned char str)
 {
-	if (str < 32 || str == 127)
+	if (str < 32 || str >= 127)
 	{
 		return (0);
 	}
@@ -33,9 +33,9 @@ char	convert_hexa(int decimal_ascii)
 
 void	ft_putstr_non_printable(char *str)
 {
-	char	antislash;
-	char	temp;
-	int		compteur;
+	char			antislash;
+	unsigned char	temp;
+	int				compteur;
 
 	antislash = 92;
 	compteur = 0;

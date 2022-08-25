@@ -118,3 +118,8 @@ int main(void)
 	printf("Original: \n%s\n-----\nAfterward: \n",a);
 	ft_putstr_non_printable(a);
 }
+int	main(void)
+{
+	char	*chaine = "xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxx0xxxxxxxxx";
+	ft_print_memory(chaine,ft_strlen(chaine));
+}
